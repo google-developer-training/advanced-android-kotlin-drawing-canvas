@@ -104,10 +104,17 @@ class MyCanvasView(context: Context) : View(context) {
         motionTouchEventX = event.x
         motionTouchEventY = event.y
 
-        when (event.action) {
-            MotionEvent.ACTION_DOWN -> touchStart()
-            MotionEvent.ACTION_MOVE -> touchMove()
-            MotionEvent.ACTION_UP -> touchUp()
+        if (!(motionTouchEventX < frame.left ||
+                motionTouchEventX > frame.right ||
+                motionTouchEventY < frame.top ||
+                motionTouchEventY > frame.bottom)){
+
+
+            when(event.action){
+                MotionEvent.ACTION_DOWN -> touchStart()
+                MotionEvent.ACTION_MOVE -> touchMove()
+                MotionEvent.ACTION_UP -> touchUp()
+            }
         }
         return true
     }
