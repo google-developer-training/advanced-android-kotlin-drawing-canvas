@@ -1,5 +1,5 @@
 ---
-name: Custom issue template
+name: Advanced Android in Kotlin issue template
 about: Report problems with Advanced Android in Kotlin codelab
 title: " Advanced Android in Kotlin: Canvas Objects 2.2 [Step #][description]"
 labels: ''
